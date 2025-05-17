@@ -8,13 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             const targetId = link.getAttribute('data-target');
 
-            // Hide video and fade in the selected content
             videoContainer.style.display = 'none';
             contentSections.forEach(section => {
                 if (section.id === targetId) {
-                    section.classList.add('show'); // Fade in the content
+                    section.classList.add('show');
                 } else {
-                    section.classList.remove('show'); // Hide other sections
+                    section.classList.remove('show');
                 }
             });
         });
