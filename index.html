@@ -65,7 +65,6 @@
         </header>
         
         <main id="main-content">
-            <!-- Default content (YouTube video) -->
             <div class="video-container" id="video-container">
                 <iframe
                     class="youtube-video"
@@ -82,7 +81,6 @@
     </div>
 
     <script>
-        // JavaScript to handle the click event and content switching
         document.addEventListener('DOMContentLoaded', function () {
             const navLinks = document.querySelectorAll('.navbar a');
             const videoContainer = document.getElementById('video-container');
@@ -93,9 +91,7 @@
                     event.preventDefault();
                     const targetId = link.getAttribute('data-target');
     
-                    // Check if the clicked item is Motorikbana and replace content
                     if (targetId === 'motorikbana') {
-                        // Hide the video and update main content with Motorikbana info
                         videoContainer.style.display = 'none';
                         mainContent.innerHTML = `
                             <h2>Motorikbana</h2>
@@ -104,9 +100,7 @@
                         `;
                        
                     } 
-                    // Check if the clicked item is Padel and replace content
                     else if (targetId === 'padel') {
-                        // Hide the video and update main content with Padel info
                         videoContainer.style.display = 'none';
                         mainContent.innerHTML = `
                             <h2>Padel</h2>
@@ -115,7 +109,6 @@
                             <img src="images/padel.jpg" alt="Padel Image" class="content-image">
                         `;
                     }
-                    // Optional: Add logic for other sections
                 });
             });
         });
