@@ -4,9 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="content">
+        <header>
+            <div class="header-content">
+                <h1>
+                    <a href="index.html"><img src="images/goiflogga.png" alt="Logo" class="header-image"></a>
+                    <span class="header-text">Välkommen till Braås GoIF!</span>
+                </h1>
+                <nav>
+                    <ul class="navbar">
+                        <li class="dropdown">
+                            <a href="#">Aktivitetsparken</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#" data-target="motorikbana">Motorikbana</a></li>
+                                <li><a href="#" data-target="padel">Padel</a></li>
+                                <li><a href="#">Utegym</a></li>
+                                <li><a href="#">Boule</a></li>
+                                <li><a href="#">Grillplats</a></li>
+                                <li><a href="#">Hinerbana</a></li>
+                                <li><a href="#">TRIQ arena</a></li>
+                                <li><a href="#">Pumptrack</a></li>
+                                <li><a href="#">Mountainbike</a></li>
+                                <li><a href="#">Tennis</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Fotboll</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Killar</a></li>
+                                <li><a href="#">Tjejer</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Innebandy</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Killar</a></li>
+                                <li><a href="#">Tjejer</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Tennis</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Dam</a></li>
+                                <li><a href="#">Herr</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Om oss</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Hitta</a></li>
+                                <li><a href="bulma.html">Kontakt</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main id="main-content">
+            <!-- Default content (YouTube video) -->
+            <div class="video-container" id="video-container">
+                <iframe
+                    class="youtube-video"
+                    src="https://www.youtube.com/embed/LoUS8sTXE4A?autoplay=1&mute=1&controls=0&rel=0&showinfo=0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </main>
+
+        <footer>Gjort av Linus Plutt</footer>
+    </div>
+
+    <script>
+        // JavaScript to handle the click event and content switching
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.navbar a');
+            const videoContainer = document.getElementById('video-container');
+            const mainContent = document.getElementById('main-content');
     
-</body>
-</html>
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const targetId = link.getAttribute('data-target');
+    
+                    // Check if the clicked item is Motorikbana and replace content
+                    if (targetId === 'motorikbana') {
+                        // Hide the video and update main content with Motorikbana info
+                        videoContainer.style.display = 'none';
+                        mainContent.innerHTML = `
+                            <h2>Motorikbana</h2>
+                            <p>Motorikbanan är perfekt för yngre åldrar, du tränar balanssinnet på ett lekfullt sätt.</p>
+                            <img src="motorikbana.jpg" alt="Motorikbanna Image" class="content-image">
+                        `;
+                       
+                    } 
+                    // Check if the clicked item is Padel and replace content
+                    else if (targetId === 'padel') {
+                        // Hide the video and update main content with Padel info
+                        videoContainer.style.display = 'none';
+                        mainContent.innerHTML = `
+                            <h2>Padel</h2>
+                            <p>Padel is a popular sport combining tennis and squash. It’s played in doubles, making it a social and dynamic activity! It’s a great way to enjoy physical activity while having fun with friends or family.</p>
+                            <p>Come and try out our Padel courts!</p>
+                            <img src="images/padel.jpg" alt="Padel Image" class="content-image">
+                        `;
+                    }
+                    // Optional: Add logic for other sections
+                });
+            });
+        });
+    </script>
+    </body>
+    </html>
+    
