@@ -21,14 +21,12 @@
                             <ul class="dropdown-content">
                                 <li><a href="#" data-target="motorikbana">Motorikbana</a></li>
                                 <li><a href="#" data-target="padel">Padel</a></li>
-                                <li><a href="#">Utegym</a></li>
-                                <li><a href="#">Boule</a></li>
-                                <li><a href="#">Grillplats</a></li>
-                                <li><a href="#">Hinerbana</a></li>
-                                <li><a href="#">TRIQ arena</a></li>
-                                <li><a href="#">Pumptrack</a></li>
-                                <li><a href="#">Mountainbike</a></li>
-                                <li><a href="#">Tennis</a></li>
+                                <li><a href="#" data-target="utegym">Utegym</a></li>
+                                <li><a href="#" data-target="boule">Boule</a></li>
+                                <li><a href="#" data-target="hinderbana">Hinderbana</a></li>
+                                <li><a href="#" data-target="triqarena">Triqarena</a></li>
+                                <li><a href="#" data-target="pumptrack">Pumptrack</a></li>
+                                <li><a href="#" data-target="tennis">Tennis</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -87,39 +85,91 @@
             const navLinks = document.querySelectorAll('.navbar a');
             const videoContainer = document.getElementById('video-container');
             const mainContent = document.getElementById('main-content');
-    
+
             navLinks.forEach(link => {
                 link.addEventListener('click', function (event) {
                     event.preventDefault();
                     const targetId = link.getAttribute('data-target');
-    
+
                     // Check if the clicked item is Motorikbana and replace content
                     if (targetId === 'motorikbana') {
-                        // Hide the video and update main content with Motorikbana info
                         videoContainer.style.display = 'none';
                         mainContent.innerHTML = `
-                            <h2>Motorikbana</h2>
-                            <p>Motorikbanan är perfekt för yngre åldrar, du tränar balanssinnet på ett lekfullt sätt.</p>
-                            <img src="motorikbana.jpg" alt="Motorikbanna Image" class="content-image">
+                           <h3>Motorikbana</h3>
+                        
+                         Motorikbanan är perfekt för yngre åldrar.<br>
+                        Du tränar balanssinnet på ett lekfullt sätt.
+                         </p>
+                            <img src="images/motorikbana.jpg" alt="Motorikbana Image" class="content-image">
                         `;
-                       
                     } 
                     // Check if the clicked item is Padel and replace content
                     else if (targetId === 'padel') {
-                        // Hide the video and update main content with Padel info
                         videoContainer.style.display = 'none';
                         mainContent.innerHTML = `
-                            <h2>Padel</h2>
-                            <p>Padel is a popular sport combining tennis and squash. It’s played in doubles, making it a social and dynamic activity! It’s a great way to enjoy physical activity while having fun with friends or family.</p>
-                            <p>Come and try out our Padel courts!</p>
+                            <h1>Padel</h1>
+                            <p>Vi har 2 dubbelbanor och en singelbana</p>
                             <img src="images/padel.jpg" alt="Padel Image" class="content-image">
+                            <img src="images/padel1.jpg" alt="Padel Image" class="content-image">
+                            <img src="images/padel2.jpg" alt="Padel Image" class="content-image">
                         `;
                     }
-                    // Optional: Add logic for other sections
-                });
+                     else if (targetId === 'utegym') {
+                        videoContainer.style.display = 'none';
+                        mainContent.innerHTML = `
+                            <h1>Utegym</h1>
+                            <p>Använd gärna vårt utegym<br>
+                            Gymmet är främst för vuxna och tillgänglighetsanpassat</p>
+                            <img src="images/utegym.jpg" alt="Utegym Image" class="content-image">
+                        `;
+                    }
+                    else if (targetId === 'boule') {
+                        videoContainer.style.display = 'none';
+                        mainContent.innerHTML = `
+                            <h1>Boule</h1>
+                            <img src="images/boule.jpg" alt="Boule Image" class="content-image">
+                        `;
+                    }
+                    else if (targetId === 'hinderbana') {
+                        videoContainer.style.display = 'none';
+                        mainContent.innerHTML = `
+                            <h1>Hinderbana</h1>
+                            <p>Hinderbanan består av 10 hinder</p>
+                            <img src="images/hinderbana.jpg" alt="Hinderbana Image" class="content-image">
+                            <img src="images/hinderbana1.jpg" alt="Hinderbana Image" class="content-image">
+                        `;
+                    }
+                    else if (targetId === 'triqarena') {
+                        videoContainer.style.display = 'none';
+                        mainContent.innerHTML = `
+                            <h1>Triq Arena</h1>
+                            <p>TRIQ arena kan användas till Fotboll, Gåfotboll, Fotbollstennis, Basket mm.</p>
+                            <img src="images/triq.jpg" alt="Triq Image" class="content-image">
+
+                        `;
+                    }
+                    else if (targetId === 'pumptrack') {
+                        videoContainer.style.display = 'none';
+                        mainContent.innerHTML = `
+                            <h1>Pumptrack</h1>
+                            <p>TRIQ arena kan användas till Fotboll, Gåfotboll, Fotbollstennis, Basket mm.</p>
+                            <img src="images/pumptrack.jpg" alt="Pumptrack" class="content-image">
+
+                        `;
+                    }
+                    else if (targetId === 'tennis') {
+                        videoContainer.style.display = 'none';
+                        mainContent.innerHTML = `
+                            <h1>Tennis</h1>
+                            <p>Vår bana har Hardcourt underlag</p>
+                            <img src="images/tennis.jpg" alt="Tennis" class="content-image">
+
+                        `;
+                    }
+                    // Add more sections here if needed
+                }); 
             });
         });
     </script>
-    </body>
-    </html>
-    
+</body>
+</html>

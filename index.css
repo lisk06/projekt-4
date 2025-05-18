@@ -225,6 +225,29 @@ footer {
 .navbar ul {
     list-style-type: none;
     padding-left: 0;
+}.content-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px; /* Adds space below each image */
 }
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds vertical spacing between images */
+}
+
+@media (min-width: 768px) {
+    .image-gallery {
+        flex-direction: row; /* Stacks images horizontally on larger screens */
+        justify-content: space-between; /* Space out images evenly */
+    }
+
+    .content-image {
+        max-width: 30%; /* Adjusts the image width for horizontal layout */
+    }
+}
+
 
 
