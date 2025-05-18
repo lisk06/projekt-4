@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             const targetId = link.getAttribute('data-target');
 
-            // Hide video and fade in the selected content
             videoContainer.style.display = 'none';
             
             // Hide all sections initially

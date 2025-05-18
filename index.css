@@ -1,11 +1,9 @@
-/* Base Reset and Box Sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -13,7 +11,6 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Header Styling */
 header {
     background-color: #333;
     padding: 10px 0;
@@ -22,8 +19,8 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    opacity: 0; /* Initially hidden */
-    animation: fadeIn 1s forwards; /* Fade-in animation */
+    opacity: 0;
+    animation: fadeIn 1s forwards; 
 }
 
 .header-content {
@@ -33,7 +30,7 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    flex-wrap: wrap; /* Allows the header content to stack in mobile */
+    flex-wrap: wrap;
 }
 
 header h1 {
@@ -44,11 +41,10 @@ header h1 {
     align-items: center;
 }
 
-/* Image Styling */
 .header-image {
-    height: 60px; /* Adjusted to make the image smaller */
+    height: 60px; 
     width: auto;
-    margin-right: 10px; /* Space between the image and text */
+    margin-right: 10px; 
 }
 
 .header-text {
@@ -57,13 +53,13 @@ header h1 {
     font-weight: bold;
 }
 
-/* Navbar Styling */
+
 .navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Stack items vertically on mobile */
+    flex-direction: column;
 }
 
 .navbar > li {
@@ -77,7 +73,7 @@ header h1 {
     text-decoration: none;
 }
 
-/* Dropdown Styling */
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -108,7 +104,7 @@ header h1 {
     
 }
 
-/* Main Section Styling */
+
 main {
     display: flex;
     justify-content: center;
@@ -117,27 +113,24 @@ main {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    padding-top: 25px; /* Adjusted to account for header height */
-    /* Remove any borders from main section */
+    padding-top: 25px; 
 main, .video-container, iframe {
-    border: none; /* Removes borders from main, video container, and iframe */
-    padding: 0;   /* Ensures no padding is added */
-    margin: 0;    /* Ensures no margin is added */
+    border: none;
+    padding: 0; 
+    margin: 0; 
 }
 }
 
-/* Video Container Styling */
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 1200px; /* You can set it as large as you want */
-    height: 75vh; /* Increased height for a bigger video */
+    max-width: 1200px; 
+    height: 75vh;
     background: #000;
     overflow: hidden;
     border-radius: 8px;
 }
 
-/* Iframe Styling */
 .video-container iframe {
     position: absolute;
     top: 0;
@@ -147,7 +140,6 @@ main, .video-container, iframe {
     border: none;
 }
 
-/* Footer Styling */
 footer {
     background-color: #333;
     color: white;
@@ -155,7 +147,6 @@ footer {
     padding: 10px 0;
 }
 
-/* Animation for fade-in effect */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -167,23 +158,20 @@ footer {
     }
 }
 
-/* Mobile First Media Queries */
 @media (min-width: 768px) {
-    /* Adjust header and navbar layout for larger screens */
     .header-content {
         flex-direction: row;
         justify-content: space-between;
     }
 
     .navbar {
-        flex-direction: row; /* Display navbar horizontally on larger screens */
+        flex-direction: row;
     }
 
     .navbar > li {
         margin-right: 20px;
     }
 }
-/* Smooth transition for content sections */
 .content-section {
     display: none;
     opacity: 0;
@@ -194,13 +182,11 @@ footer {
     display: block;
     opacity: 1;
 }
-/* Style for the dropdown container */
 .dropdown {
     position: relative;
     display: inline-block;
   }
   
-  /* Initially hide the dropdown content */
   .dropdown-content {
     display: none;
     position: absolute;
@@ -210,18 +196,16 @@ footer {
     padding: 12px 16px;
     border-radius: 5px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    opacity: 0; /* Start invisible */
-    transform: translateY(-20px); /* Start above */
-    transition: all 0.3s ease; /* Smooth transition for visibility and position */
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
   }
   
-  /* Dropdown hover effect */
   .dropdown:hover .dropdown-content {
     display: block;
-    opacity: 1; /* Make it visible */
-    transform: translateY(0); /* Bring it into place */
+    opacity: 1;
+    transform: translateY(0); 
   }
-  /* Remove bullet points from the dropdown menu */
 .navbar ul {
     list-style-type: none;
     padding-left: 0;
