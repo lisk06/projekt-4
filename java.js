@@ -11,17 +11,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
             videoContainer.style.display = 'none';
             
-            // Hide all sections initially
             contentSections.forEach(section => {
-                section.classList.remove('show'); // Remove 'show' class to hide the section
-                section.style.display = 'none'; // Ensure the section is hidden
+                section.classList.remove('show'); 
+                section.style.display = 'none'; 
             });
 
-            // Check and display the clicked section
+           
             const targetSection = document.getElementById(targetId);
             if (targetSection) {
-                targetSection.classList.add('show'); // Add 'show' class to fade in the content
-                targetSection.style.display = 'block'; // Display the section
+                targetSection.classList.add('show');
+                targetSection.style.display = 'block'; 
             }
         });
     });
