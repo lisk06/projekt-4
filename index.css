@@ -155,7 +155,6 @@ footer {
   height: auto;
   margin: 10px 0;
 }
-/* Reset some default behaviors */
 body, ul, li, h1, p {
   margin: 0;
   padding: 0;
@@ -204,7 +203,6 @@ body, ul, li, h1, p {
   display: block;
 }
 
-/* 🔽 Responsive navigation styles */
 .menu-toggle {
   display: none;
   font-size: 1.5rem;
