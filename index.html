@@ -1,170 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Braås GoIF</title>
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    /* Dropdown Toggle Links */
+    .navbar li a {
+      padding: 10px 15px;
+      display: block;
+      background-color: #585e64;; /* dark blue */
+      color: white;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar li a:hover {
+      background-color: #585e64;
+    }
+
+    /* Dropdown Menu */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #585e64;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
+      border-radius: 4px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content li a {
+      padding: 10px;
+      width: 150px;
+      color: white;
+      background-color: #585e64;
+      display: block;
+      transition: background-color 0.3s;
+    }
+
+    .dropdown-content li a:hover {
+      background-color: #585e64;
+    }
+  </style>
 </head>
 <body>
-    <div class="content">
-        <header>
-            <div class="header-content">
-                <h1>
-                    <a href="index.html"><img src="images/goiflogga.png" alt="Logo" class="header-image"></a>
-                    <span class="header-text">Välkommen till Braås GoIF!</span>
-                </h1>
-                <nav>
-                    <ul class="navbar">
-                        <li class="dropdown">
-                            <a href="#">Aktivitetsparken</a>
-                            <ul class="dropdown-content">
-                                <li><a href="#" data-target="motorikbana">Motorikbana</a></li>
-                                <li><a href="#" data-target="padel">Padel</a></li>
-                                <li><a href="#" data-target="utegym">Utegym</a></li>
-                                <li><a href="#" data-target="boule">Boule</a></li>
-                                <li><a href="#" data-target="hinderbana">Hinderbana</a></li>
-                                <li><a href="#" data-target="triqarena">Triqarena</a></li>
-                                <li><a href="#" data-target="pumptrack">Pumptrack</a></li>
-                                <li><a href="#" data-target="tennis">Tennis</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">Fotboll</a>
-                            <ul class="dropdown-content">
-                                <li><a href="#">Killar</a></li>
-                                <li><a href="#">Tjejer</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">Innebandy</a>
-                            <ul class="dropdown-content">
-                                <li><a href="#">Killar</a></li>
-                                <li><a href="#">Tjejer</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">Tennis</a>
-                            <ul class="dropdown-content">
-                                <li><a href="#">Dam</a></li>
-                                <li><a href="#">Herr</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">Om oss</a>
-                            <ul class="dropdown-content">
-                                <li><a href="#">Hitta</a></li>
-                                <li><a href="bulma.html">Kontakt</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        
-        <main id="main-content">
-            <div class="video-container" id="video-container">
-                <iframe
-                    class="youtube-video"
-                    src="https://www.youtube.com/embed/LoUS8sTXE4A?autoplay=1&mute=1&controls=0&rel=0&showinfo=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </main>
+  <div class="content">
+    <header>
+      <div class="header-content">
+        <h1 class="site-title">
+          <a href="index.html">
+            <img src="images/goiflogga.png" alt="Logo" class="header-image" />
+          </a>
+          <span class="header-text">Välkommen till Braås GoIF!</span>
+        </h1>
+        <nav>
+            
+          <ul class="navbar">
+            <li class="dropdown">
+              <a href="#">Aktivitetsparken</a>
+              <ul class="dropdown-content">
+                <li><a href="#" data-target="motorikbana">Motorikbana</a></li>
+                <li><a href="#" data-target="padel">Padel</a></li>
+                <li><a href="#" data-target="utegym">Utegym</a></li>
+                <li><a href="#" data-target="boule">Boule</a></li>
+                <li><a href="#" data-target="hinderbana">Hinderbana</a></li>
+                <li><a href="#" data-target="triqarena">Triqarena</a></li>
+                <li><a href="#" data-target="pumptrack">Pumptrack</a></li>
+                <li><a href="#" data-target="tennis">Tennis</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#">Fotboll</a>
+              <ul class="dropdown-content">
+                <li><a href="#" data-target="fotboll">Fotboll</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#">Innebandy</a>
+              <ul class="dropdown-content">
+                <li><a href="#" data-target="innebandy">Innebandy</a></li>
 
-        <footer>Gjort av Linus Plutt</footer>
-    </div>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#">Tennis</a>
+              <ul class="dropdown-content">
+                <li><a href="#" data-target="tennis">Tennis</a></li>
+                
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#">Om oss</a>
+              <ul class="dropdown-content">
+                <li><a href="#" data-target="hitta">Hitta</a></li>
+                <li><a href="#" data-target="kontakt">Kontakt</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navLinks = document.querySelectorAll('.navbar a');
-            const videoContainer = document.getElementById('video-container');
-            const mainContent = document.getElementById('main-content');
+    <main id="main-content">
+      Hos oss på Braås GoIF hittar du ett rikt utbud av aktiviteter för alla åldrar och intressen. Vi erbjuder spännande och roliga möjligheter inom fotboll, innebandy och tennis – sporter som förenar och stärker både kropp och själ.
+      Utöver våra idrotter har vi även en aktivitetspark där alla kan samlas för lek, träning och sociala evenemang i en inspirerande och trygg miljö.
+      Oavsett om du är nybörjare eller erfaren idrottare är du varmt välkommen att bli en del av vår gemenskap och upptäcka glädjen i rörelse tillsammans med oss!
+      <div class="video-container" id="video-container">
+        <iframe
+          class="youtube-video"
+          src="https://www.youtube.com/embed/LoUS8sTXE4A?autoplay=1&mute=1&controls=0&rel=0&showinfo=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </main>
 
-            navLinks.forEach(link => {
-                link.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    const targetId = link.getAttribute('data-target');
-                    if (targetId === 'motorikbana') {
-                        videoContainer.style.display = 'none';
-                        mainContent.innerHTML = `
-                           <h3>Motorikbana</h3>
-                        
-                         Motorikbanan är perfekt för yngre åldrar.<br>
-                        Du tränar balanssinnet på ett lekfullt sätt.
-                         </p>
-                            <img src="images/motorikbana.jpg" alt="Motorikbana Image" class="content-image">
-                        `;
-                    } 
-                    else if (targetId === 'padel') {
-                        videoContainer.style.display = 'none';
-                        mainContent.innerHTML = `
-                            <h1>Padel</h1>
-                            <p>Vi har 2 dubbelbanor och en singelbana</p>
-                            <img src="images/padel.jpg" alt="Padel Image" class="content-image">
-                            <img src="images/padel1.jpg" alt="Padel Image" class="content-image">
-                            <img src="images/padel2.jpg" alt="Padel Image" class="content-image">
-                        `;
-                    }
-                     else if (targetId === 'utegym') {
-                        videoContainer.style.display = 'none';
-                        mainContent.innerHTML = `
-                            <h1>Utegym</h1>
-                            <p>Använd gärna vårt utegym<br>
-                            Gymmet är främst för vuxna och tillgänglighetsanpassat</p>
-                            <img src="images/utegym.jpg" alt="Utegym Image" class="content-image">
-                        `;
-                    }
-                    else if (targetId === 'boule') {
-                        videoContainer.style.display = 'none';
-                        mainContent.innerHTML = `
-                            <h1>Boule</h1>
-                            <img src="images/boule.jpg" alt="Boule Image" class="content-image">
-                        `;
-                    }
-                    else if (targetId === 'hinderbana') {
-                        videoContainer.style.display = 'none';
-                        mainContent.innerHTML = `
-                            <h1>Hinderbana</h1>
-                            <p>Hinderbanan består av 10 hinder</p>
-                            <img src="images/hinderbana.jpg" alt="Hinderbana Image" class="content-image">
-                            <img src="images/hinderbana1.jpg" alt="Hinderbana Image" class="content-image">
-                        `;
-                    }
-                    else if (targetId === 'triqarena') {
-                        videoContainer.style.display = 'none';
-                        mainContent.innerHTML = `
-                            <h1>Triq Arena</h1>
-                            <p>TRIQ arena kan användas till Fotboll, Gåfotboll, Fotbollstennis, Basket mm.</p>
-                            <img src="images/triq.jpg" alt="Triq Image" class="content-image">
+    <footer>
+      Denna hemsida är hårdknackad i HTML / CSS / JAVA av Linus Skoglund
+    </footer>
+  </div>
 
-                        `;
-                    }
-                    else if (targetId === 'pumptrack') {
-                        videoContainer.style.display = 'none';
-                        mainContent.innerHTML = `
-                            <h1>Pumptrack</h1>
-                            <p>TRIQ arena kan användas till Fotboll, Gåfotboll, Fotbollstennis, Basket mm.</p>
-                            <img src="images/pumptrack.jpg" alt="Pumptrack" class="content-image">
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navLinks = document.querySelectorAll('.navbar a');
+      const videoContainer = document.getElementById('video-container');
+      const mainContent = document.getElementById('main-content');
 
-                        `;
-                    }
-                    else if (targetId === 'tennis') {
-                        videoContainer.style.display = 'none';
-                        mainContent.innerHTML = `
-                            <h1>Tennis</h1>
-                            <p>Vår bana har Hardcourt underlag</p>
-                            <img src="images/tennis.jpg" alt="Tennis" class="content-image">
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          const targetId = link.getAttribute('data-target');
+          if (!targetId) return;
 
+<<<<<<< HEAD
+          videoContainer.style.display = 'none';
+
+          const contentMap = {
+            motorikbana: `
+              <h3>Motorikbana</h3>
+              <p>Motorikbanan är perfekt för yngre åldrar.<br>Du tränar balanssinnet på ett lekfullt sätt.</p>
+              <img src="images/motorikbana.jpg" alt="Motorikbana Image" class="content-image">`,
+            padel: `
+              <h1>Padel</h1>
+              <p>Vi har 2 dubbelbanor och en singelbana</p>
+              <img src="images/padel.jpg" alt="Padel Image" class="content-image">
+              <img src="images/padel1.jpg" alt="Padel Image" class="content-image">
+              <img src="images/padel2.jpg" alt="Padel Image" class="content-image">`,
+            utegym: `
+              <h1>Utegym</h1>
+              <p>Använd gärna vårt utegym<br>Gymmet är främst för vuxna och tillgänglighetsanpassat</p>
+              <img src="images/utegym.jpg" alt="Utegym Image" class="content-image">`,
+            boule: `
+              <h1>Boule</h1>
+              <img src="images/boule.jpg" alt="Boule Image" class="content-image">`,
+            hinderbana: `
+              <h1>Hinderbana</h1>
+              <p>Hinderbanan består av 10 hinder</p>
+              <img src="images/hinderbana.jpg" alt="Hinderbana Image" class="content-image">
+              <img src="images/hinderbana1.jpg" alt="Hinderbana Image" class="content-image">`,
+            triqarena: `
+              <h1>Triq Arena</h1>
+              <p>TRIQ arena kan användas till Fotboll, Gåfotboll, Fotbollstennis, Basket mm.</p>
+              <img src="images/triq.jpg" alt="Triq Image" class="content-image">`,
+            pumptrack: `
+              <h1>Pumptrack</h1>
+              <p>TRIQ arena kan användas till Fotboll, Gåfotboll, Fotbollstennis, Basket mm.</p>
+              <img src="images/pumptrack.jpg" alt="Pumptrack" class="content-image">`,
+            tennis: `
+              <h1>Tennis</h1>
+              <p>Vår bana har Hardcourt underlag</p>
+              <img src="images/tennis.jpg" alt="Tennis" class="content-image">`,
+            hitta: `
+              <h1>Hitta</h1>
+              <p>Här hittar du oss på Braås GoIF:</p>
+              <iframe
+                src="https://www.google.com/maps?q=Carl+Lihnells+väg+1,+363+41+Braås&output=embed"
+                width="100%"
+                height="500"
+                style="border:0; margin-top: 20px;"
+                allowfullscreen=""
+                loading="lazy">
+              </iframe>`,
+            kontakt: `
+              <h1>Kontakt</h1>
+              <p>Namn: Braås GoIF</p>
+              <p>Adress: c/o E Carlsson, Movägen 13</p>
+              <p>Postadress: 36342 Braås</p>
+              <p>Telefon: </p>
+              <p>E-post: </p>
+              <p>Org.nr: 829501-3984</p>
+              <p>Swish: 1232207173</p>`,
+            innebandy: `
+            <h1>Innebandy</h1>
+            <img src="images/innebandy.jpg" alt="innebandy" class="content-image">`,
+            fotboll: `
+            <h1>Fotboll</h1>
+            <img src="images/fotboll.jpg" alt="fotboll" class="content-image">`,
+          };
+
+          mainContent.innerHTML = contentMap[targetId] || '';
+=======
                         `;
                     }
-                    // Add more sections here if needed
+                    
                 }); 
             });
+>>>>>>> 2b64b7b2788b6595bfe9ee6a28c7188c47bafc48
         });
-    </script>
+      });
+    });
+  </script>
 </body>
 </html>
